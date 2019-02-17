@@ -1,0 +1,169 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Campsite Reservation API",
+		"_postman_id": "cbf91785-3494-2046-56b3-99cb28b84526",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Book - GET All",
+			"request": {
+				"url": "http://localhost:8080/api/book/",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Book - POST",
+			"request": {
+				"url": "http://localhost:8080/api/book/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Sebastian\",\n\t\"lastname\": \"Serri\",\n\t\"email\": \"sebastian@gmail.com\",\n\t\"dateFrom\": \"2019-02-23 00:00:00\",\n\t\"dateTo\": \"2019-02-26 00:00:00\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Book - GET by BookingId",
+			"request": {
+				"url": "http://localhost:8080/api/book/18ccd858-de66-41d5-88ce-0cb9039bdb9d",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Book - UPDATE",
+			"request": {
+				"url": "http://localhost:8080/api/book/",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"bookingId\": \"18ccd858-de66-41d5-88ce-0cb9039bdb9d\",\n    \"name\": \"Sebastian\",\n    \"lastname\": \"Serri\",\n    \"email\": \"seba.serri@gmail.com\",\n    \"dateFrom\": \"2019-03-01 00:00:00\",\n    \"dateTo\": \"2019-03-03 00:00:00\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Book - GET Available DateFrom & DateTo",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/api/book/available?dateFrom=2019-02-17 00:00:00&dateTo=2019-02-18 00:00:00",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"book",
+						"available"
+					],
+					"query": [
+						{
+							"key": "dateFrom",
+							"value": "2019-02-17 00:00:00",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "dateTo",
+							"value": "2019-02-18 00:00:00",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Book - GET Available DateFrom & DateTo copy",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/api/book/available?dateFrom=2019-02-10&dateTo=",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"book",
+						"available"
+					],
+					"query": [
+						{
+							"key": "dateFrom",
+							"value": "2019-02-10",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "dateTo",
+							"value": "",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Book - DELETE",
+			"request": {
+				"url": "http://localhost:8080/api/book/cc79030f-4918-4145-b3d8-b9bd0e02aed0",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
