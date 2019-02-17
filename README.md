@@ -63,7 +63,7 @@ Method: DELETE - URL: /api/book - Payload:
 }
 ```
 
-Import file "Campsite API.postman_collection.json" to run the test on Postman. There are endpoints for reservations.
+Import file "Campsite Reservation API.postman_collection.json" to run the test on Postman. There are endpoints for reservations.
 
 
 ## Test
