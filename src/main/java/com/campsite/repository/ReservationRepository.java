@@ -14,14 +14,5 @@ public interface ReservationRepository extends MongoRepository <Reservation, Str
 
     Reservation findByBookingId(String bookingId);
 
-    //long countByDateFromGreaterThanEqualAndDateToLessThan(Date from, Date to);
-
-    List<Reservation> findByFromGreaterThanEqual(long dateFrom);
-
-
-    long countByFromGreaterThanEqual(long dateFrom);
-
     long countAllByFromGreaterThanEqualAndToLessThanEqual(long from, long to);
-
-    // List<Reservation> findAllByDateFromGreaterThanEqualAndDateToLessThan(Long from, Long to);
 }
